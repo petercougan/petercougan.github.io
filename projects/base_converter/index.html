@@ -1,0 +1,114 @@
+<html>
+<head>
+    <title>Convert to Decimal</title>
+    
+    <!-- VIEWPORT CONFIGURATION -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+    
+    <style>
+        #output, #error{
+            display:none;
+        }
+        #output.display, #error.display{
+            display:block;
+        }
+        .indent{
+            text-indent:25px;
+        }
+    </style>
+</head>
+<body>
+  <div class="container">
+    <div class="page-header">
+    	<a href="/portfolio.html"><b>&#9166; - Portfolio</b></a>
+        <h1>Convert to Decimal <small>Any base 2 through 9 to base 10</small></h1>
+    </div>
+      
+    <div class="input-group">
+        <span class="input-group-addon">Base</span>
+        <input type="number" max="9" class="form-control" id="inputBase"/>
+    </div>
+    
+      <br>
+      
+    <div class="input-group">
+        <span class="input-group-addon">Value</span>
+        <input type="number" class="form-control" id="inputVal"/>
+    </div>
+    
+    
+    <br>
+    
+      <button type="button" class="btn btn-default" onclick="validateInput()">
+        Convert
+      </button>
+    
+    <br><br><br>
+    
+    <div id="output" class="panel panel-success ">
+        <div class="panel-heading">Answer</div>
+        <div class="panel-body">
+            <h3>
+                <span id="outValue"></span><sub id="outBase"></sub> = 
+                <span id="answer"></span><sub>10</sub>
+            </h3>
+        </div>
+    </div>
+    
+    <div id="error" class="panel panel-danger ">
+        <div class="panel-heading">Error</div>
+        <div class="panel-body"><h3>Any digit can not be greater than <span id="maxDigit"></span></h3></div>
+    </div>
+    <br><br><br>
+    <div class="panel panel-primary">
+        <div class="panel-heading">Directions</div>
+        <div class="panel-body">
+            <ul>
+                <li>Enter a base between 2 and 9</li>
+                <li>Enter a value where each digit is no greater than the base - 1</li>
+                CORRECT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<samp>Base 3  Value 122</samp><br>
+                INCORRECT&nbsp;&nbsp;<samp>Base 3  Value 123</samp><br>
+                <li>
+                    <b>example:</b><br>
+                    <samp>
+                    <span class="indent">BASE: 4</span><br>
+                    <span class="indent">VALUE: 1232</span><br>
+                    <span class="indent">OUTPUT: 110</span>
+                    </samp>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <br><br><br>
+    <div>
+        <samp>
+            <h3>The Algorithm</h3>
+            <ol class="list-group">
+                <li class="list-group-item">where:<br>
+                    <code>base: user input (2-9)</code><br>
+                        <code>value: user input (each digit <= base-1)</code></li>
+                <li class="list-group-item">1. Determine number of digits in value
+                    <br>
+                    <code>int v=val;
+                        <br>&nbsp;while(v > 0){ <br>&nbsp;&nbsp;&nbsp;&nbsp;num_digits = num_digits + 1
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;v = v / 10
+                        <br>&nbsp;}
+                    </code>
+                </li>
+                <li class="list-group-item">2. Set an integer <code>d = 0</code></li>
+                <li class="list-group-item">3. Repeat the following while there is still at least 1 digit <code>while(num_digits > 0)</code></li>
+                <li class="list-group-item indent">4. Get the least significant digit (right most digit) in value <code>remainder = value % 10</code></li>
+                <li class="list-group-item indent">5. Add the product of remainder and the base raised to the d power to an integer final_val <code>final_val += remainder * base^d</code></li>
+                <li class="list-group-item indent">6. Increase d <code>d = d + 1</code></li>
+                <li class="list-group-item indent">7. Remove the least significant digit <code>value = value / 10</code></li>
+                <li class="list-group-item indent">8. Decrease num_digits <code>num_digits = num_digits - 1</code></li>
+            </ol>
+        </samp>
+    </div>
+    
+    <script src="script.js"></script>
+ </div>
+</body>
+</html>

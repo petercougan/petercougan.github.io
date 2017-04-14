@@ -44,17 +44,19 @@ body
 
 div.page-title
 {
-    background-color:rgba(0,0,0,0.55);
+    width:100%;
+    border-bottom:solid 3px #1F1F1F;
 }
 
-.page-title h1
+html .page-title h1
 {
-    margin:20px 0 40px;
+    margin:20px 0;
 }
 
 footer
 {
     position:static;
+    bottom:0;
     margin-top: 25px;
     padding: 15px 0;
     border-top:solid 1px #222;
@@ -86,10 +88,6 @@ footer
     color:rgb(175,175,175);
 }
 
-#land img#land-img
-{
-    border:solid 2px #fff;
-}
 /* CONTACT SECTION */
 #links
 {
@@ -102,6 +100,25 @@ footer
 {
     position: relative;
     padding-top:0;
+}
+
+/* NAVIGATION */
+nav ul
+{
+    list-style: none;
+}
+
+nav ul > li
+{
+    display: inline;
+    margin:0 10px;
+}
+
+nav a:link,
+nav a:visited,
+nav a:hover
+{
+    color:#FFF;
 }
 
 /* TEXT // FONTS */
@@ -120,7 +137,7 @@ h1
 {
 	font-family:adam;
 	letter-spacing:3px;
-	text-shadow:-2px 1px gray;
+	text-shadow:-1px 1px gray;
 	color:rgb(250,250,255);
 	margin:40px 0 10px 0;
 }
@@ -139,6 +156,41 @@ a:hover
 }
 
 /* LISTS, TABLES */
+table th
+{
+    padding:5px 10px;
+}
+
+table td
+{
+    padding:15px 10px;
+}
+
+table tr:nth-child(odd)
+{
+    background-color: rgba(255,255,255,0.05);
+}
+
+table tr:nth-child(even)
+{
+    background-color: rgba(255,255,255,0.03);
+}
+
+table td
+{
+    white-space: pre-wrap;
+}
+
+table tr:hover
+{
+    background-color: rgba(255,255,255,0.175);
+}
+
+table tr:nth-child(1):hover
+{
+    background-color: rgba(255,255,255,0.05);
+}
+
 ul.no-list-style,
 ol.no-list-style
 {
@@ -165,36 +217,21 @@ ul.no-indent
 
 hr.divide
 {
-    color:#181818;
+    border-color:#1F1F1F;
 }
 
 hr.divide-sm
 {
-    width:10%;
+    width:18%;
+}
+
+hr.divide-med
+{
+    width:38%;
 }
 
 .align-right
 {
     text-align:right;
     right:0;
-}
-
-table th
-{
-    padding:5px 10px;
-}
-
-table td
-{
-    padding:15px 10px;
-}
-
-table tr:nth-child(odd)
-{
-    background-color: rgba(255,255,255,0.05);
-}
-
-table tr:nth-child(even)
-{
-    background-color: rgba(255,255,255,0.03);
 }

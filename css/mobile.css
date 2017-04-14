@@ -1,3 +1,9 @@
+/* FILENAME: mobile.css
+** AUTHOR:   Peter Cougan
+**
+** this file provides all mobile specific styling
+*/
+
 /* MOBILE VIEW FORMATTING*/
 html.mobile,
 html.mobile body
@@ -11,16 +17,17 @@ html.mobile .container
     width:97.5%;
 }
 
-html.mobile #land,
-html.mobile #contact
+html.mobile .img-overlay
 {
-    height:100%;
-    max-width: 100%;
+    background-color: transparent;
+    position:absolute;
+    height:100vh;
+    width:100vw;
 }
 
 html.mobile footer
 {
-    display:none;
+    display: none;
 }
 
 /* GRID */
@@ -46,7 +53,8 @@ html.mobile .mobile-only
 
 html.mobile #land
 {
-    background-size:100% 100vw;
+    background:#181818;
+    height:95%;
 }
 
 html.mobile #land h1
@@ -63,6 +71,12 @@ html.mobile #land img#land-img
 {
     height:100px;
     border-radius:50px;
+}
+
+html.mobile #links
+{
+    margin-top:-10px;
+    border-top:none;
 }
 
 html.mobile .hide-on-mobile
@@ -99,13 +113,12 @@ html.mobile h4
 html.mobile table
 {
     position:relative;
-    white-space:pre-wrap;
-    width:90%;
+    width:100vw;
+    margin-left:0;
 }
 
 html.mobile table td
 {
-    white-space: pre-wrap;
     overflow: scroll;
     text-overflow: ellipsis;
 }

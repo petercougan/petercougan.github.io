@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculator</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <!-- CSS -->
+        <link rel="stylesheet" href="bootstrap.min.css" type="text/css" />
+        <style>
+        /* error message */
+        #error_message,#empty,#invalid_syntax,#divide_by_zero {
+            display:none;
+        } #error_message.display,#empty.display,#invalid_syntax.display,#divide_by_zero.display {
+            display:block;
+        }
+        /* result */
+        #result {
+            display:none;
+        }
+        #result.display {
+            display:block;
+        }
+        /* input */
+        #input.hide {
+            display:none;
+        }
+        /* reload */
+        #reload {
+            display: none;
+        }
+        #reload.display {
+            display:block;
+        }
+        #footer {
+            color:#aaa;
+            border-top:solid 1px #aaa;
+            margin:25px 0;
+            padding:15px 7px;
+        }
+        .display {
+            display: block;
+        }
+            .hide {
+                display:none;
+            }
+        </style>
+    </head>
+    <body>
+      <div class="container">
+        <div class="page-header">
+            <a href="/portfolio.html"><b>&#9166; - Portfolio</b></a>
+            <h1>
+                Mixed Number Calculator
+                <small>Displays answer as a mixed number</small>
+            </h1>
+        </div>
+        
+          <div class="panel panel-danger" id="error_message">
+            <div class="panel-heading"><h3 class="panel-title">ERROR</h3></div>
+            <div class="panel-body">
+                <span id="empty">
+                    <h4>Empty Input</h4>
+                    <ul>
+                        <li>The input you submitted was empty
+                        </li>
+                        <li>
+                        If either the Whole Number or Fraction input is not desired, enter '0'</li>
+                    </ul>
+                </span>
+                <span id="invalid_syntax">
+                    <h4>Invalid Syntax</h4>
+                    <ul>
+                        <li>The input you submitted did not meet the requirements</li>
+                        <li>
+                            Input should only contain integers and '/' to denote a fraction</li>
+                        <li>
+                            The 'Fraction' input must contain '/'</li>
+                        <br>
+                        <text>
+                        Please fix input and submit again.</text>
+                    </ul>
+                </span>
+                <span id="divide_by_zero">
+                    <h4>Cannot Divide by 0</h4>
+                    <ul>
+                        <li>Dividing by 0 returns an undefined number</li>
+                        <li>If you do not want to include a fraction, leave the cell empty</li>
+                        <li>Otherwise, fix the fraction with a denominator not equal to 0</li>
+                    </ul>
+                </span>
+            </div>
+        </div>
+        
+        <div class="panel panel-success" id="result">
+            <div class="panel-heading">
+                <h3 class="panel-title">Result</h3>
+            </div>
+            
+            <div class="panel-body">
+                
+                <h2 id="fraction_out"></h2>
+                <p id="decimal_out"></p>
+            </div>
+        </div>
+        
+        <div class="panel panel-primary" id="input">
+            <div class="panel-heading">
+                <h3 class="panel-title">Input</h3>
+            </div>
+            <div class="panel-body">
+            	<div class="input-group">
+            		<span class="input-group-addon">Whole</span>
+                	<input type="number" size="5" maxlength="5" name="whole_num" id="whole_num_in" class="form-control" />
+                </div>
+                
+                <br />
+                
+                <div class="input-group">
+                	<span class="input-group-addon">Fraction</span>
+                	<input type="text" name="fraction" id="fraction_in" class="form-control" />
+                </div>
+                
+                <br />
+                
+                <input type="button" value="+" onclick="validate()" class="btn btn-default" />
+                
+                <br><br>
+                 
+                <p><b>YOUR INPUT: </b><span id="you_entered"></span></p>  
+                
+                <br>
+                <br><br>
+                
+                <input type="button" value="Display Result" onclick="solve()"  class="btn btn-primary" />
+                <a href="index.html"><input type="button" value="Reset" class="btn btn-warning" /></a>
+            </div>
+        </div>
+             
+        
+        
+        <div class="panel panel-default" id="reload">
+            <div class="panel-heading"><h3 class="panel-title">Reload</h3></div>
+            <div class="panel-body">
+                <p>
+                    <a href="index.html">Click here to reload the calculator</a>
+                </p>
+            </div>
+        </div>
+          
+        <div class="panel panel-default" id="directions">
+            <div class="panel-heading">
+                <h3 class="panel-title">Directions</h3>
+            </div>
+            <div class="panel-body">
+                <ul>
+                    <li>Click '+' when the desired mixed number has been input</li>
+                    <li>Include as many mixed numbers as necessary -- NO LIMIT</li>
+                    <li>Recieve output as a mixed number</li>
+                    <li>Leaving a cell empty will input it as '0'</li>
+                    <br>
+                    <text>Example:</text><br>
+                    <p>IN:&nbsp;&nbsp;&nbsp;1 & 1/4 + 2 & 1/16<br>
+                    	OUT:&nbsp;&nbsp;3 & 5/16</p>
+                </ul>
+            </div>
+        </div>
+        
+        <div id="footer">
+            Copyright 2016 | Peter Cougan
+            <br>
+            Created August 2016
+        </div>
+        <!-- javascript -->
+        <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+        <script src="script.js"></script>
+        
+        
+      </div><!-- end div.container -->
+    </body>
+</html>

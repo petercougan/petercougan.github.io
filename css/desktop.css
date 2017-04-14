@@ -1,3 +1,9 @@
+/* FILENAME: desktop.css
+** AUTHOR:   Peter Cougan
+**
+** this file provides all desktop specific styling
+*/
+
 /* DESKTOP VIEW FORMATTING */
 html,
 html body
@@ -100,13 +106,11 @@ html h4
 
 html table
 {
-    white-space: nowrap;
     width:100%;
 }
 
 html table td
 {
-    white-space: nowrap;
     overflow: scroll;
     text-overflow: ellipsis;
 }

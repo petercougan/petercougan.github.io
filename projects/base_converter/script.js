@@ -75,7 +75,7 @@ function convertToBaseTen()
     while(v > 0)
     {
         num_digits++;
-        v /= 10; // remove least significant digit
+        v = Math.floor( v / 10 ); // remove least significant digit
     }
     
     // algorithm to convert to base 10

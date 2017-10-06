@@ -166,7 +166,7 @@ table tr.table-header
     background-color:inherit;
 }
 
-table tr > td
+table tr.table-header > td
 {
     width:100%;
     font-size:18px;

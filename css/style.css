@@ -161,6 +161,17 @@ table th
     padding:5px 10px;
 }
 
+table tr.table-header
+{
+    background-color:inherit;
+}
+
+table tr > td
+{
+    width:100%;
+    font-size:18px;
+}
+
 table td
 {
     padding:15px 10px;

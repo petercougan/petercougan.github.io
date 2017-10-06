@@ -163,13 +163,18 @@ table th
 
 table tr.table-header
 {
-    background-color:inherit;
+    background-color:none;
 }
 
 table tr.table-header > td
 {
     width:100%;
-    font-size:18px;
+    font-size:24px;
+}
+
+table tr.table-header td
+{
+    width:0;
 }
 
 table td

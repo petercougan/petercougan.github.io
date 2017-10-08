@@ -161,16 +161,15 @@ table th
     padding:5px 10px;
 }
 
-table tr.table-header td
+table tr.table-header
 {
-    width:0;
+    padding-left:15px;
+    background-color:none;
 }
 
-
-table tr.table-header > td
+table tr.table-header:hover
 {
-    width:100%;
-    font-size:24px;
+    background-color:none;
 }
 
 table td

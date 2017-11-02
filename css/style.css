@@ -163,8 +163,13 @@ table th
 
 table tr.table-header
 {
-    padding-left:15px;
-    background-color:none;
+    padding:25px 0;
+    background:inherit;
+}
+
+table tr.table-header:hover
+{
+    background:inherit;
 }
 
 table tr.table-header:hover

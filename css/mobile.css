@@ -54,7 +54,7 @@ html.mobile .mobile-only
 html.mobile #land
 {
     background:#181818;
-    height:95%;
+    /*height:95%;*/
 }
 
 html.mobile #land h1

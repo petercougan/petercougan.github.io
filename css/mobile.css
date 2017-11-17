@@ -21,7 +21,7 @@ html.mobile .img-overlay
 {
     background-color: transparent;
     position:absolute;
-    height:100vh;
+    height:100%;
     width:100vw;
 }
 
@@ -54,7 +54,7 @@ html.mobile .mobile-only
 html.mobile #land
 {
     background:#181818;
-    height:40vh;
+    max-height:50vh;
 }
 
 html.mobile #land h1

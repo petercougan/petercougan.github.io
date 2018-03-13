@@ -266,6 +266,6 @@ footer .inner {
     }
 }
 
-.input-group-text {
+.input-group-text, .badge {
     text-shadow: none;
 }

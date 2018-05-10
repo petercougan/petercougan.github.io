@@ -97,8 +97,8 @@
                                         </button>
                                     </div>
                                     <div class="modal-body">
-                                        <p class="lead">Download my resume and course history in the navigation bar<!-- or request my transcript--></p>
-                                        <p class="font-italic">Click on a heading to expand its content.</p>
+                                        <p class="lead">Download my resume and course history in the navigation bar</p>
+                                        <p class="font-italic">Click on a heading to collapse/expand it's content.</p>
                                         <div id="exampleAccordion" data-children=".item">
                                             <div class="item">
                                                 <a data-toggle="collapse" data-parent="#exampleAccordion" href="#exampleAccordion1" role="button" aria-expanded="true" aria-controls="exampleAccordion1">
@@ -108,6 +108,7 @@
                                                     <span class="badge badge-pill badge-success">Algorithm Design</span>
                                                     <br>
                                                     <span class="badge badge-pill badge-danger">Software Design</span>
+                                                    <span class="badge badge-pill badge-danger">UML</span>
                                                     <br>
                                                     <span class="badge badge-pill badge-primary">Java</span>
                                                     <span class="badge badge-pill badge-primary">C/C++</span>
@@ -119,8 +120,7 @@
                                                     <br>
                                                     <span class="badge badge-pill badge-warning">LaTex</span>
                                                     <br>
-                                                    <span class="badge badge-pill badge-light">Probability</span>
-                                                    <span class="badge badge-pill badge-light">Linear Algebra</span>
+                                                    <span class="badge badge-pill badge-light">Probability and Statistics</span>
                                                 </div>
                                             </div>
                                             
@@ -129,7 +129,7 @@
                                                 <a data-toggle="collapse" data-parent="#exampleAccordion" href="#course-work" role="button" aria-expanded="false" aria-controls="exampleAccordion2">
                                                     <h2 class="section-heading mb-0">Recent Coursework</h2>
                                                 </a>
-                                                <div id="course-work" class="collapse" role="tabpanel">
+                                                <div id="course-work" class="collapse show" role="tabpanel">
                                                     <div class="table-wrap">
                                                         <table class="table table-striped table-hover table-dark">
                                                             <thead>
@@ -166,28 +166,28 @@
                                                                     <td class="brk-768">Designed a multi-threaded kernel-space algorithm with semaphores to synchronize processes and protect shared resources.</td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <th scope="row">Software Requirements Specification, Design Document</th>
+                                                                    <th scope="row">Software Requirements Specification (SRS), Design Document (DD)</th>
                                                                     <td>CIS 453</td>
                                                                     <td class="brk-768">Fall 2017</td>
-                                                                    <td class="brk-768">Work in a group to create both the Software Specification and Design Documents for a given software. Includes use-case diagrams, sequence diagrams, etc. </td>
+                                                                    <td class="brk-768">Constructed the SRS and DD for a student advising web application. Created UML diagrams (Use Cases, Class Diagrams, Sequence Diagrams, etc.).</td>
                                                                 </tr>
                                                                 <tr>
                                                                     <th scope="row">Earth's Solar Orbit</th>
                                                                     <td>Computational Physics [PHY 307]</td>
                                                                     <td class="brk-768">Fall 2017</td>
-                                                                    <td class="brk-768">Implement Newton's Law of Gravity to animate a planet going around the sun.</td>
+                                                                    <td class="brk-768">Modeled Newton's Law of Gravity with an animation of the Earth's solar orbit.</td>
                                                                 </tr>
                                                                 <tr>
                                                                     <th scope="row">Simple Pendulum</th>
                                                                     <td>Computational Physics [PHY 307]</td>
                                                                     <td class="brk-768">Fall 2017</td>
-                                                                    <td class="brk-768">Implemented the [ d<sup>2</sup>&Theta; / dt<sup>2</sup> = - (g / L) sin(&Theta;) ] mechanical equation as a computer program using both the Euler-Cromer and Leapfrog algorithms. Animated the system by producing cartesian coordinates at each time step and using a program to draw each coordinate sequentially in time.</td>
+                                                                    <td class="brk-768">Modeled the motion of a simple pendulum with an animation of the[ d<sup>2</sup>&Theta; / dt<sup>2</sup> = - (g / L) sin(&Theta;) ] mechanical equation and the Euler-Cromer, Leapfrog algorithms.</td>
                                                                 </tr>
                                                                 <tr>
                                                                     <th scope="row">Assembly Language Merge-Sort Implementation</th>
                                                                     <td>Computer Design & Programming Systems [CIS 341]</td>
                                                                     <td class="brk-768">Spring 2017</td>
-                                                                    <td class="brk-768">Implement the Merge-Sort algorithm as a MIPS assembly language program.</td>
+                                                                    <td class="brk-768">Created a merge sort in assembly language. Operated on an array of random ints.</td>
                                                                 </tr>
                                                             </tbody>
                                                         </table>
@@ -201,7 +201,7 @@
                                                 <a data-toggle="collapse" data-parent="#exampleAccordion" href="#personal-work" role="button" aria-expanded="false" aria-controls="exampleAccordion2">
                                                     <h2 class="section-heading mb-0">Personal Work</h2>
                                                 </a>
-                                                <div id="personal-work" class="collapse" role="tabpanel">
+                                                <div id="personal-work" class="collapse show" role="tabpanel">
                                                     <div class="table-responsive">
                                                         <table class="table table-hover ">
                                                             <thead>
@@ -211,6 +211,12 @@
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
+                                                                <h3></h3>
+                                                                <tr>
+                                                                    <th scope="row">Current work is coming soon.</th>
+                                                                    <td>A focus on machine learning projects.</td>
+                                                                </tr>
+                                                                <h3>Old</h3>
                                                                 <tr>
                                                                     <th scope="row"><a href="/projects/mixed_number_calc">Mixed Number Calculator</a></th>
                                                                     <td>Input: mixed numbers, Output: simplified mixed number</td>

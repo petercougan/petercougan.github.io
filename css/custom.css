@@ -164,7 +164,7 @@ footer .inner {
 
 @media (min-width: 1200px) {
     .modal-dialog {
-        max-width:1000px;
+        max-width:95%;
     }
     
     #transcriptRequest.modal-dialog {

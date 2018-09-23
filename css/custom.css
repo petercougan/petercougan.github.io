@@ -227,6 +227,13 @@ footer .inner {
     width:100%;
 }
 
+.table td,
+.table th,
+.table thead th {
+    border:none;    
+}
+
+
 .page-break-sm {
     margin:5rem 0;
 }

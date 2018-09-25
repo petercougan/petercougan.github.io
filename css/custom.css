@@ -219,6 +219,30 @@ footer .inner {
     background-color:rgba(255,255,255,0.05);
 }
 
+
+
+/*-----------------------------------------*
+ *       Landing Page Slideshow            *
+ *-----------------------------------------*/
+
+.slide-controls .slide-control a.btn.btn-link {
+    color:rgba(255,255,255,0.75);
+    text-decoration:underline;
+}
+
+.slide-controls .slide-control.active a.btn.btn-link {
+    color:initial;
+}
+
+.slide-items .slide-item {
+    display:none;
+}
+
+.slide-items .slide-item.active {
+    display:default;
+}
+
+
 /*-----------------------------------------*
  *            MISC MAINTENANCE             *
  *-----------------------------------------*/

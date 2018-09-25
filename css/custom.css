@@ -225,13 +225,18 @@ footer .inner {
  *       Landing Page Slideshow            *
  *-----------------------------------------*/
 
+.slide-controls .slide-control {
+    list-style:none;
+    display:inline;
+}
+
 .slide-controls .slide-control a.btn.btn-link {
     color:rgba(255,255,255,0.75);
     text-decoration:underline;
 }
 
 .slide-controls .slide-control.active a.btn.btn-link {
-    color:initial;
+    color:blue;
 }
 
 .slide-items .slide-item {
@@ -239,7 +244,7 @@ footer .inner {
 }
 
 .slide-items .slide-item.active {
-    display:default;
+    display:block;
 }
 
 

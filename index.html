@@ -151,7 +151,7 @@
                                             <!-- COURSE WORK -->
                                             <div class="item">
                                                 <a data-toggle="collapse" data-parent="#exampleAccordion" href="#course-work" role="button" aria-expanded="false" aria-controls="exampleAccordion2">
-                                                    <h2 class="section-heading mb-0">Recent Coursework</h2>
+                                                    <h2 class="section-heading mb-0">Coursework</h2>
                                                 </a>
                                                 <div id="course-work" class="collapse show" role="tabpanel">
                                                     <div class="table-wrap">
@@ -214,7 +214,7 @@
                                                     <h2 class="section-heading mb-0">Personal Work</h2>
                                                 </a>
                                                 <div id="personal-work" class="collapse show" role="tabpanel">
-                                                    <div class="table-responsive">
+                                                    <div class="table-wrap">
                                                         <table class="table">
                                                             <thead>
                                                                 <tr>
@@ -279,7 +279,65 @@
                                             </div> <!-- .item -->
                                             <!-- END PERSONAL WORK -->
 
-                                            
+                                            <!-- COURSE WORK -->
+                                            <div class="item">
+                                                <a data-toggle="collapse" data-parent="#exampleAccordion" href="#course-work" role="button" aria-expanded="false" aria-controls="exampleAccordion2">
+                                                    <h2 class="section-heading mb-0">Coursework</h2>
+                                                </a>
+                                                <div id="course-work" class="collapse show" role="tabpanel">
+                                                    <div class="table-wrap">
+                                                        <table class="table">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th scope="col">Title</th>
+                                                                    <th scope="col">Course</th>
+                                                                    <th scope="col" class="brk-768">Semester</th>
+                                                                    <th scope="col" class="brk-768">Description</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th scope="row">Naive Bayesian Classifier (NBC)</th>
+                                                                    <td>Randomized Algorithms [CIS 400]</td>
+                                                                    <td class="brk-768">Spring 2018</td>
+                                                                    <td class="brk-768">Applied Baye's Theorem to classify thousands of data points with the NBC machine learning algorithm.</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th scope="row">Agile Group Project</th>
+                                                                    <td>Software Implementation [CIS 454[</td>
+                                                                    <td class="brk-768">Spring 2018</td>
+                                                                    <td class="brk-768">Created a crowd-sourcing web application to propose and collaborate on open-sourced medical technology</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th scope="row">Waterfall Group Project</th>
+                                                                    <td>Software Implementation [CIS 454]</td>
+                                                                    <td class="brk-768">Spring 2018</td>
+                                                                    <td class="brk-768">Created a student advising web application for students to help align students with their academic track and create appointments with advisors</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th scope="row">Multi-Threaded Synchronization in Kernel Space</th>
+                                                                    <td>Design of Operating Systems [CIS 486]</td>
+                                                                    <td class="brk-768">Fall 2017</td>
+                                                                    <td class="brk-768">Designed a multi-threaded kernel-space algorithm with semaphores to synchronize processes and protect shared resources.</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th scope="row">Software Requirements Specification (SRS), Design Document (DD)</th>
+                                                                    <td>CIS 453</td>
+                                                                    <td class="brk-768">Fall 2017</td>
+                                                                    <td class="brk-768">Constructed the SRS and DD for a student advising web application. Created UML diagrams (Use Cases, Class Diagrams, Sequence Diagrams, etc.).</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th scope="row">Assembly Language Merge-Sort Implementation</th>
+                                                                    <td>Computer Design & Programming Systems [CIS 341]</td>
+                                                                    <td class="brk-768">Spring 2017</td>
+                                                                    <td class="brk-768">Created a merge sort in assembly language. Operated on an array of random ints.</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div><!-- .table-responsive -->
+                                                </div>
+                                            </div> <!-- .item -->
+                                            <!-- END COURSE WORK -->
                                         </div>
                                     </div> <!-- .modal-body -->
                                     <div class="modal-footer">
@@ -300,5 +358,22 @@
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+            $('.slide-control a').on('click', function(){
+                console.log("clicked");
+                
+                var show_id = $(this).attr('href').replace('#','');
+                var hide_id = $('slide-controls.active')[0].attr('href').replace('#','');
+                
+                console.log("hiding: " + hide_id);
+                
+                
+                console.log("showing: " + show_id);
+
+                /*for(var i = 0; i < $('.slide-controls')[0].length; i++) {
+                    console.log("hiding: " + $('slide-items')[i].id);
+                }*/
+            });
+        </script>
     </body>
 </html>

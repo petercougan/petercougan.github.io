@@ -368,9 +368,12 @@
                 var show_href = $(this).attr('href');
                 var hide_href = $('.slide-control.active a').attr('href');
                 
+                console.log("showing: " + show_href);
+                console.log("hiding: " + hide_href);
+                
                 // add/remove active class of .slide-item 
-                $(hide_href).removeClass('active');
-                $(show_href).addClass('active');
+                $(".slide-item"+hide_href).removeClass('active');
+                $(".slide-item"+show_href).addClass('active');
                 
                 // add/remove active class of .slide-control
                 $('.slide-control a[href="' + hide_href + '"]').removeClass('active');

@@ -164,8 +164,8 @@ footer .inner {
 }*/
 
 .modal-dialog {
-        width:95%;
-    }
+    max-width:95%;
+}
 
 /*@media (min-width: 1200px) {
     .modal-dialog {

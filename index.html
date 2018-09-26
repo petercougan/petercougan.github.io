@@ -360,20 +360,21 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
         <script type="text/javascript">
             $('.slide-control a').on('click', function(){
-                console.log("clicked");
+                /*
+                    Toggles between content to show in landing page slideshow
+                */
                 
-                var show_id = $(this).attr('href').replace('#','');
-                console.log("showing: " + show_id);
-
-                var hide_id = $('.slide-control.active a').attr('href').replace('#','');
-                console.log("hiding: " + hide_id);                
+                // get hyperlinks of content to show/hide
+                var show_href = $(this).attr('href');
+                var hide_href = $('.slide-control.active a').attr('href');
                 
-                $("#"+hide_id).removeClass('active');
-                $("#"+show_id).addClass('active');
+                // add/remove active class of .slide-item 
+                $(hide_href).removeClass('active');
+                $(show_href).addClass('active');
                 
-                /*for(var i = 0; i < $('.slide-controls')[0].length; i++) {
-                    console.log("hiding: " + $('slide-items')[i].id);
-                }*/
+                // add/remove active class of .slide-control
+                $('.slide-control a[href=" + . hide_href . + "]').removeClass('active');
+                $('.slide-control a[href=" + . show_href . + "]').addClass('active');
             });
         </script>
     </body>

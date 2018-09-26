@@ -6,6 +6,7 @@ body {
     background-size: cover;
     background-color:#101010;
     color:#ccc;
+    max-height:100vh;
 }
 
 @media (max-width: 576px) {
@@ -228,7 +229,6 @@ footer .inner {
 .slide-controls .slide-control {
     list-style:none;
     display:inline;
-    padding:1rem 2rem;
     border-radius:4px;
 }
 
@@ -247,6 +247,9 @@ footer .inner {
 
 .slide-items .slide-item.active {
     display:block;
+    position:relative;
+    height:100%;
+    overflow:scroll;
 }
 
 

@@ -228,6 +228,8 @@ footer .inner {
 .slide-controls .slide-control {
     list-style:none;
     display:inline;
+    padding:1rem 2rem;
+    border-radius:4px;
 }
 
 .slide-controls .slide-control a.btn.btn-link {
@@ -237,6 +239,11 @@ footer .inner {
 
 .slide-controls .slide-control.active a.btn.btn-link {
     color:blue;
+}
+
+.slide-controls .slide-control.active {
+    background-color:rgba(255,255,255,0.5);
+    color:#000;
 }
 
 .slide-items .slide-item {

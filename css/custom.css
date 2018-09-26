@@ -206,10 +206,11 @@ footer .inner {
     left:0;
     transition:none;
     border:none;
+    word-break:break-all;
 }
 
 .modal .item {
-        overflow:scroll;
+        word-break:break-all;
 }
 
 .modal .table thead {

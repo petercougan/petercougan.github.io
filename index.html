@@ -365,7 +365,7 @@
                 var show_id = $(this).attr('href').replace('#','');
                 console.log("showing: " + show_id);
 
-                var hide_id = $('slide-controls.active a')[0].attr('href').replace('#','');
+                var hide_id = $('slide-control.active a')[0].attr('href').replace('#','');
                 console.log("hiding: " + hide_id);                
                 
                 $("#"+hide_id).removeClass('active');

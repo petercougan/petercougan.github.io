@@ -238,14 +238,8 @@ footer .inner {
 }
 
 .slide-controls .slide-control.active a.btn.btn-link {
-    color:rgba(255,255,255,0.75);
-    text-decoration:underline;
+    color:rgba(255,255,255,0.5);
 }
-
-/*.slide-controls .slide-control.active {
-    background-color:rgba(255,255,255,0.5);
-    color:#000;
-}*/
 
 .slide-items .slide-item {
     display:none;

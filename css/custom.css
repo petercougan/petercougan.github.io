@@ -233,18 +233,18 @@ footer .inner {
 }
 
 .slide-controls .slide-control a.btn.btn-link {
-    color:rgba(255,255,255,0.75);
+    color:#6c757d;
     text-decoration:underline;
 }
 
 .slide-controls .slide-control.active a.btn.btn-link {
-    color:blue;
+    color:rgba(255,255,255,0.75);
 }
 
-.slide-controls .slide-control.active {
+/*.slide-controls .slide-control.active {
     background-color:rgba(255,255,255,0.5);
     color:#000;
-}
+}*/
 
 .slide-items .slide-item {
     display:none;

@@ -363,13 +363,14 @@
                 console.log("clicked");
                 
                 var show_id = $(this).attr('href').replace('#','');
-                var hide_id = $('slide-controls.active')[0].attr('href').replace('#','');
-                
-                console.log("hiding: " + hide_id);
-                
-                
                 console.log("showing: " + show_id);
 
+                var hide_id = $('slide-controls.active a')[0].attr('href').replace('#','');
+                console.log("hiding: " + hide_id);                
+                
+                $("#"+hide_id).removeClass('active');
+                $("#"+show_id).addClass('active');
+                
                 /*for(var i = 0; i < $('.slide-controls')[0].length; i++) {
                     console.log("hiding: " + $('slide-items')[i].id);
                 }*/

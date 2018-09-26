@@ -141,7 +141,7 @@ footer .inner {
 /*-----------------------------------------*
  *               MODAL                 *
  *-----------------------------------------*/
-@media (min-width: 576px) {
+/*@media (min-width: 576px) {
     .modal-dialog {
         max-width:500px;
     }
@@ -161,9 +161,13 @@ footer .inner {
     #transcriptRequest .modal-dialog {
         max-width:700px;
     }
-}
+}*/
 
-@media (min-width: 1200px) {
+.modal-dialog {
+        width:95%;
+    }
+
+/*@media (min-width: 1200px) {
     .modal-dialog {
         max-width:95%;
     }
@@ -171,7 +175,7 @@ footer .inner {
     #transcriptRequest.modal-dialog {
         max-width:800px;
     }
-}
+}*/
 
 .modal-header {
     border-bottom:solid 3px #222;
@@ -188,7 +192,7 @@ footer .inner {
 .modal-content {
     background-color:#101010;
     text-align: left;
-    overflow:scroll;
+    word-break:break-all;
 }
 
 .modal .table {

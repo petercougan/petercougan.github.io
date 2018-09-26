@@ -234,11 +234,12 @@ footer .inner {
 
 .slide-controls .slide-control a.btn.btn-link {
     color:#6c757d;
-    text-decoration:underline;
+    text-decoration:none;
 }
 
 .slide-controls .slide-control.active a.btn.btn-link {
     color:rgba(255,255,255,0.75);
+    text-decoration:underline;
 }
 
 /*.slide-controls .slide-control.active {

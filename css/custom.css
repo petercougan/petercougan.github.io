@@ -210,7 +210,12 @@ footer .inner {
     left:0;
     transition:none;
     border:none;
-    word-break:break-all;
+    table-layout:fixed;
+    word-break:break-word;
+}
+
+.table #title-col {
+    width:;    
 }
 
 .modal .item {
@@ -244,6 +249,7 @@ footer .inner {
 
 .slide-controls .slide-control.active a.btn.btn-link {
     color:rgba(255,255,255,0.5);
+    text-decoration:underline;
 }
 
 .slide-items .slide-item {
@@ -254,7 +260,7 @@ footer .inner {
     display:block;
     position:relative;
     height:100%;
-    overflow:scroll;
+    overflow:visible;
 }
 
 

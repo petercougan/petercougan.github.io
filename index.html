@@ -82,22 +82,22 @@
                                 
                                 <div class="slide-items">
                                     <div class="slide-item active" id="Home">
-                                        <p class="lead"><a href="http://coursecatalog.syr.edu/preview_program.php?catoid=13&poid=6682">Computer Science | Syracuse University | Class of 2019</a></p>
+                                        <p class="lead"><a href="http://coursecatalog.syr.edu/preview_program.php?catoid=13&poid=6682">B.S. Computer Science | Syracuse University | Class of 2019</a></p>
 
-                                        <a href="http://mohawkglobal.com/">Application Development Intern at Mohawk Global [May 2018 - Current]</a>
+                                        <a href="http://mohawkglobal.com/">Junior Software Developer @ Mohawk Global [May 2018 - Current]</a>
 
-                                        <p>Searching for full time employment opportunities post-graduation [May 2019]</p>
    <!--                                     
                                                                                 <img src="/img/head-shot.JPG" class="img-fluid rounded-circle" id="head-shot" alt="head-shot.JPG">
 -->
                                     </div>
                                     <div class="slide-item" id="About">
                                         <p class="lead">
-                                            I'm a senior computer science student with field-related experience before graduation.
+                                            <span id="years-experience"></span> year of professional experience developing web applications with ASP.NET C#
                                             <br>
                                             <br>
                                             Primarily interested in machine learning and software development, I've focused my upper-division course selection around these topics.&nbsp;
-                                            I intend to pursue a career in Data Science or Software Engineering.</p>
+                                            I intend to pursue a career in Data Science or Software Engineering.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -431,6 +431,11 @@
                 $('.slide-control.active').removeClass('active');
                 $('.slide-control a[href="' + show_href + '"]').parent().addClass('active');
             });
+            
+            var now = new Date();
+            var start = new Date('2018/05/16');
+            var years = (now - start).getYear();
+            $('#years-experience').text(years);
         </script>
     </body>
 </html>

@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Notes | GitHub</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <style>
+            header, nav, section {
+                margin-top:1rem;
+            }
+            code {
+                background-color: #eee;
+                border-radius: 4px;
+                padding: 0.25rem 0.5rem;
+            }
+            dl > .heading {
+                font-weight: bold;
+            }
+            #topic-dropdown {
+                display:none;
+                position:fixed;
+                z-index:100;
+            }
+            #basic-commands dd {
+                margin-bottom:1rem;
+            }
+            code.multi-line {
+                display: block;
+                width:100%;
+            }
+            ul#general-flow-topics > li {
+                margin-bottom: 2rem;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <nav class="dropdown" id="topic-dropdown">
+                <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Topics
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                </div>
+            </nav>
+            <header class="page-header border-bottom border-light">
+                <p>June 2019 - <a href="http://petercougan.com">Peter Cougan</a></p>
+                <h4 class="display-4">GitHub Notes</h4>
+                <p class="lead">An introduction to <a href="https://github.com">GitHub</a>, with notes on a series of basic topics, such as commands and general flow.</p>
+            </header>
+            <section class="card bg-light mb-3" id="table-of-contents">
+                <div class="card-header">Table of Contents</div>
+                <div class="card-body">
+                    <dl class="row">
+                        <dt class="col-sm-3 heading">Topic</dt>
+                        <dd class="col-sm-9 heading">Description</dd>
+                    </dl>
+                </div>
+            </section>
+            <section class="card bg-light mb-3" id="introduction">
+                <div class="card-header">Introduction</div>
+                <div class="card-body">
+                    <p class="description">What are GitHub, Git, and Version Control?</p>
+                    <ul>
+                        <li><strong>GitHub</strong> is a software that runs on top of the system Git</li>
+                        <li><strong>Git</strong> is a system that defines a standardized way of handling version control</li>
+                        <li>
+                            <strong>Version control</strong> is the idea that projects need a standardized method for handling changes. This is useful for:
+                            <ul>
+                                <li>Keeping past versions of files, in case there is a bug in the most recent</li>
+                                <li>Multiple people working on the same file simultaneously</li>
+                                <li>Tracking who has made what changes to what files</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="card bg-light mb-3" id="basic-commands">
+                <div class="card-header">Basic Commands</div>
+                <div class="card-body">
+                    <p class="description">What you need to know to start using GitHub.</p>
+                    <dl class=row>
+                        <dt class="col-sm-3"><code>clone</code></dt>
+                        <dd class="col-sm-9">
+                            <p>Copies and pastes the repository and its files from GitHub onto your local machine.<br /><code>git clone https://github.com/{insert username}}/{insert repository name}.git</code></p>
+                        </dd>
+                        <dt class="col-sm-3"><code>status</code></dt>
+                        <dd class="col-sm-9"><p>Tells you the difference between your local version of the repository and the latest version that is on the GitHub cloud. Also summarizes the set of changes to be commited.</p></dd>
+                        <dt class="col-sm-3"><code>add</code>, <code>add .</code>, <code>add -A</code></dt>
+                        <dd class="col-sm-9"><p>Maually selects an individual file to be added to the changeset.<br /><code>.</code> everything in directory, <code>-A</code> all<br /><code>git add {insert file name here}</code></p></dd>
+                        <dt class="col-sm-3"><code>commit -m</code></dt>
+                        <dd class="col-sm-9"><p>Locks the change into the repository, but does not yet sync it with the GitHub cloud.<br /><code>git commit -m '{insert description of commit here}'</code></p></dd>
+                        <dt class="col-sm-3"><code>push</code>*</dt>
+                        <dd class="col-sm-9">Syncs the committed changes on your local machine to the GitHub cloud.</dd>
+                        <dt class="col-sm-3"><code>pull</code>*</dt>
+                        <dd class="col-sm-9">Syncs the committed changes from the GitHub cloud to your local machine.</dd>
+                    </dl>
+                </div>
+            </section>
+            <section class="card bg-light mb-3" id="common-terms">
+                <div class="card-header">Common Terms</div>
+                <div class="card-body">
+                    <p class="description">Words and phrases you will see often and should generally know.</p>
+                </div>
+            </section>
+            <section class="card bg-light mb-3" id="general-flow">
+                <div class="card-header">General Flow</div>
+                <div class="card-body">
+                    <p class="description">Learn how to start using GitHub for version control from creating a new repository to syncing your changes with your team's changes.</p>
+                    <ul id="general-flow-topics">
+                        <li>
+                            <p>
+                                <strong>Start From Scratch</strong>
+                                <br />
+                                <small>Getting started with a new repository and work environment</small>
+                            </p>
+                            <ol>
+                                <li>
+                                    <em>Create a repository</em>
+                                    <ul>
+                                        <li>Click 'New' under repositories on GitHub.com</li>
+                                        <li>
+                                            Check the 'Initialize with a README' box
+                                            <ul>
+                                                <li>This will allow to immediately clone the repository</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <em>Clone the repository</em>
+                                    <ul>
+                                        <li>Retrieve the URL under the 'Clone or Download' dropdown on the main page for the repository</li>
+                                        <li>Open the Mac Terminal / Windows Command Prompt and change to the directory you wish to clone the project into</li>
+                                        <li>Enter <code>git clone {insert URL here}</code></li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </li>
+                        <li>
+                            <p>
+                                <strong>Main Flow</strong>
+                                <br />
+                                <small>Keeping your changes synced with your team member's changes</small>
+                            </p>
+                            <ol>
+                                <li>
+                                    <em>Navigate to Local Directory</em>
+                                    <ul>
+                                        <li>Using the Terminal/Command Prompt, go into the already existing directory for your repository</li>
+                                        <li>For example, if my repository was stored in <code>../../GitHub/Repositories/MyProject</code>, I would change into the <code>MyProject</code> directory</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <em>Grab All Changes Made By Team</em>
+                                    <ul>
+                                        <li>This will help to prevent merge conflicts when you and another member of your team both have unchecked in changes for the same files</li>
+                                        <li><code>git pull</code></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <em>Make Changes</em>
+                                    <ul>
+                                        <li>Create, edit, or delete any files that you need to</li>
+                                        <li>As a general rule of thumb, you will want to only make changes for the specific task you are working on so you can make a commit (the next step) with a descriptive comment.</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <em>Commit Changes to a Changeset</em>
+                                    <ul>
+                                        <li>This will group all of your changes for the task you are working on, so you have a clean history of changes </li>
+                                        <li>
+                                            <ol>
+                                                <li><code>git add -A</code>, <code>git add {insert filename}</code>, or <code>git add .</code></li>
+                                                <li><code>git commit -m "{insert description}"</code></li>
+                                            </ol>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <em>Repeat Steps 3 and 4</em>
+                                    <ul>
+                                        <li>Make and commit changes frequently, as you complete each task</li>
+                                        <li>At this point, any changes between you and your team will still have not been synced</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <em>Grab All Changes Made By Team, Again</em>
+                                    <ul>
+                                        <li>At this point, if you and a team member have both edited the same lines of the same file, a merge conflict will show, or the pull will succeed</li>
+                                        <li><code>git pull</code></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <em>Sync Your Changes</em>
+                                    <ul>
+                                        <li>Assuming you have no merge conflicts, you will now need to get all of the changes you've made synced with the repository on the cloud</li>
+                                        <li><code>git push</code></li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </li>
+                        <li>
+                            <p>
+                                <strong>Resolving Merge Conflicts</strong>
+                                <br />
+                                <small>Handling issues when you and a team member have edited the same lines of the same files. These steps should be followed between the last two steps of the <strong>Main Flow</strong> section</small>
+                            </p>
+                            <ol>
+                                <li>
+                                    <em>Manually select which changes are the correct ones that should be pushed to the repository</em>
+                                    <ul>
+                                        <li>GitHub won't know if your changes, your colleague's changes, or a combination of the two are the appropriate changes to be synced, so it will show you the two lines that are causing the conflict, and you must edit the file as needed</li>
+                                        <li>
+                                            Consider the following line of code that is being edited between two people in their local repositories:
+                                            <br />
+                                            <code>
+                                                &lt;p&gt;Hello, world!&lt;/p&gt;
+                                            </code>
+                                            <br />
+                                            You make the following edit:
+                                            <br />
+                                            <code>
+                                                &lt;p&gt;Hello, universe!&lt;/p&gt;
+                                            </code>
+                                            <br />
+                                            Your colleague makes the following edit:
+                                            <br />
+                                            <code>
+                                                &lt;p class="welcome"&gt;Hello, world!&lt;/p&gt;
+                                            </code>
+                                            <br />
+                                            Then GitHub will provide the following code for you to merge:
+                                            <br />
+                                            <code class="multi-line">
+                                                &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+                                                <br />
+                                                &lt;p&gt;Hello, universe!&lt;/p&gt;
+                                                <br />
+                                                ========
+                                                <br />
+                                                &gt;&gt;&gt;&gt;&gt;&gt;&gt; ###############################
+                                                <br />
+                                                &lt;p class="welcome"&gt;Hello, world!&lt;/p&gt;
+                                                <br />
+                                            </code>
+                                            <br />
+                                            You can then merge the two like so, or simply keep one of the lines:
+                                            <br />
+                                            <code>
+                                                &lt;p class="welcome"&gt;Hello, universe!&lt;/p&gt;
+                                            </code>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <em>Commit Changes to a Changeset</em>
+                                    <ol>
+                                        <li><code>git add -A</code></li>
+                                        <li><code>git commit -m "{insert message here}"</code></li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <em>Sync Changes to Cloud</em>
+                                    <ol>
+                                        <li><code>git pull</code></li>
+                                        <li><code>git push</code></li>
+                                    </ol>
+                                </li>
+                            </ol>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </body>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            // create a table of contents
+            $(function(){
+                // grab all sections, but keep table of contents separate from the rest
+                var sections = $('section:not(#table-of-contents)');
+                var table_of_contents = $('section#table-of-contents > div.card-body > dl.row');
+                var dropdown = $('#topic-dropdown > .dropdown-menu');
+
+                // add each section to the table of contents
+                sections.each(function(){
+                    // text/attributes for this section
+                    var title = $(this).children('div.card-header').text();
+                    var description = $(this).children('div.card-body').children('p.description').text();
+                    var id = $(this).attr('id');
+
+                    // table of contents markup for this section
+                    var dt = $('<dt class="col-sm-3"><a href="#'+id+'" class="go-to-section">'+title+'</a></dt>');
+                    var dd = $('<dd class="col-sm-9">'+description+'</dd>');
+
+                    // add the section to the table of contents
+                    table_of_contents.append(dt);
+                    table_of_contents.append(dd);
+
+                    // add the section to dropdown
+                    dropdown.append('<a href="#'+id+'" class="dropdown-item">'+title+'</a>');
+                });
+            });
+
+            // show topic dropdown on scroll
+            $(window).scroll(function(){
+                if($(window).scrollTop() > 200) {
+                    $('#topic-dropdown').show();
+                }
+                else {
+                    $('#topic-dropdown').hide();
+                }
+            });
+        });
+    </script>
+</html>

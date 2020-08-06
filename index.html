@@ -14,609 +14,312 @@
         <title>Peter Cougan</title>
 
         <style>
-            
-            /*
-                General styling
-             */
-
-            #navbar {
-                position: fixed;
-                z-index:100;
-                width: 100%;
-            }
-
-            #content-wrapper {
-                padding-bottom:2rem;
-            }
-
-            /* Add margin to non-home tabs - margin on home pushes hero down */
-            .tab-pane:not(#home) {
-                margin-top:5rem;
-            }
-
-            #hero {
-                padding:7rem 0 7rem;
-                box-shadow: 0px 0px 8px 2px #000000;
-            }
-
-            /* Force cards in #home to fill row, so all are same height */
-            #home .card, #home .card-body {
-                height:100%;
-            }
-
-            .connect-logo {
-                height:19px;
-            }
-
-            #hero-alert {
-                width:max-content;
-                margin:0 auto;
-            }
-
-
-
-            /* 
-                Force footer to bottom of page
-             */
-
             html, body {
-                height: 100%;
+                min-height: 100vh;
+                margin:0;
             }
 
-            body {
-                display: flex;
-                flex-direction: column;
+            a  {
+                color: #fff;
             }
 
-            #content-wrapper {
-                flex: 1 0 auto;
+            a:hover {
+                color: #ffa500;
             }
 
-            .footer {
+            a:active, a:focus {
+                color: #e59400;
+            }
+
+            /*
+                Header / Navbar
+            */
+
+            header {
+                background-color:rgba(255,255,255,0.25);
+                border-bottom: solid 5px white;
+            }
+
+            header, header > *, #navbar, #navbar > * {
+                text-align: center !important;
+                margin: 0 auto;
+            }
+ 
+            #navbar {
+                width: max-content;
+            }
+
+            #brand > a, #brand a:hover {
+                text-decoration: none;
+            }
+
+            /*
+                Content
+            */
+
+            .content-only, .content-only:hover, .content-only:active, .content-only:focus {
+                background: none;
+                border: none;
+            }
+
+            /*
+                Bootstrap customizations
+            */
+
+            #summary .list-group-item {
                 padding:1rem 0;
-                flex-shrink: 0;
+                background-color: transparent;
+                border: none;
+            }
+
+            .list-inline-item:not(:last-child)::after {
+                content: ", ";
+            }
+
+            .lead.small {
+                font-size: 1.0rem;
+            }
+
+            /*
+                Back to top
+            */
+
+            #back-to-top-float-container {
+                float: right;
+            }
+
+            @media only screen and (max-width: 767px) {
+                #back-to-top-float-container {
+                    right: 1rem;
+                }
+            }
+
+            #back-to-top {
+                display: none;
+                position: fixed;
+                bottom: 2rem;
+                margin: 0;
+                padding: 0;
+                right: inherit;
+            }
+
+            #back-to-top-btn {
+                color: #fff;
+                font-size: 32px;
+                margin: 0;
+                padding: 0;
+                border-radius: 32px;
+                box-shadow: 0px 4px 2px -2px rgba(0,0,0,0.25);
+            }
+
+            /*
+                Callout
+            */
+
+            .callout {
+                padding:0rem 1rem 1rem;
+                margin: 0 auto;
+                width: 65%;
+                background-color: rgba(205,205,205,0.25);
+                border-top: solid 1px #ddd;
+                border-bottom: solid 1px #ddd;
+                border-top-width: 4px;
+                border-right: none;
+                border-radius: 3px;
+                border-top-right-radius: 3px;
+                overflow: auto;
+            }
+
+            @media only screen and (max-width: 767px) {
+                .callout {
+                    width: 97.5%;
+                }
+            }
+
+            .callout > * {
+                padding:0 2rem;
+                vertical-align: middle;
+            }
+
+            .callout > .callout-title {
+                text-align: center;
+                margin-top:1rem;
+                font-size: 0.75rem;
+                font-weight: bold;
+                text-transform: uppercase;
+                margin-bottom: 1rem;
+            }
+
+            .callout > .callout-thumbnail {
+                width: 33%;
+                float:left;
+            }
+
+            @media only screen and (max-width: 767px) {
+                .callout > .callout-thumbnail {
+                    width: 100%;
+                }
+            }
+
+            .callout > .callout-thumbnail .callout-img {
+                max-width: 100%;
+                max-height:3.5rem;
+            }
+
+            .callout > .callout-description {
+                text-align: left;
+            }
+
+            @media only screen and (max-width: 767px) {
+                .callout > .callout-description,
+                .callout > .callout-thumbnail {
+                    text-align: center;
+                }
             }
         </style>
     </head>
-    <body class="bg-light">
+    <body class="waves">
 
-        <nav id="navbar" class="navbar navbar-expand-lg navbar-light">
-            <div class="container">
+        <header class="pt-3">
+            <h1 class="display-3" id="brand">
+                <a href="index.html" class="text-body">Peter Cougan</a>
+            </h1>
 
-                <a class="navbar-brand" href="index.html">Peter Cougan</a>
+            <nav class="nav justify-content-center" id="navbar">
+                <a href="https://linkedin.com/in/petercougan" class="nav-link">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="mailto:peter_cougan@outlook.com" class="nav-link">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="tel:13155345512" class="nav-link">
+                    <i class="fas fa-phone"></i>
+                </a>
+            </nav>
+        </header>
 
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+        <main class="container-md">
 
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav nav" id="myTab" role="tablist">
+            <ul class="list-group list-group-flush" id="summary">
 
-                        <li class="nav-item">
-                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true"><i class="fas fa-home"></i></a>
-                        </li>
+                <li class="list-group-item">
+                    <div class="callout">
 
-                        <li class="nav-item">
-                            <a class="nav-link" id="blog-tab" data-toggle="tab" href="#blog" role="tab" aria-controls="blog" aria-selected="false">Blog</a>
-                        </li>
+                        <h5 class="callout-title">Current Position</h5>
 
-                        <li class="nav-item">
-                            <a class="nav-link" id="projects-tab" data-toggle="tab" href="#projects" role="tab" aria-controls="projects" aria-selected="false">Projects</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" id="experience-tab" data-toggle="tab" href="#experience" role="tab" aria-controls="experience" aria-selected="false">Experience & Skills</a>
-                        </li>
-
-                    </ul>
-                </div>
-
-            </div><!-- / .container -->
-        </nav><!-- / #navbar -->
-
-
-        <main class="tab-content" id="content-wrapper">
-
-            <section class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-
-                <div id="hero" class="jumbotron jumbotron-fluid shadow-md  rounded">
-                    <div class="container">
-                        <div id="hero-alert" class="alert alert-warning" role="alert">
-                            <strong>Warning!</strong> This site is still under construction. Some content or features may not be finished yet.
+                        <div class="callout-thumbnail">
+                            <a href="https://www.amazon.jobs/en/teams/software-development-engineers-and-managers">
+                                <img src='img/logos/amazon-logo_2000w604h.png' alt="Amazon.com LLC" class="callout-img" id="amazon-logo" />
+                            </a>
                         </div>
-                        <h1 class="display-4">Peter Cougan</h1>
-                        <p class="lead">
-                            Software Developer at Mohawk Global <!--<button class="btn btn-link btn-sm" type="button">Read More</button>-->
+                    
+                        <p class="callout-description">
+                            <span class="lead">Software Development Engineer</span>
                             <br />
-                            B.S. Computer Science from Syracuse University, Class of 2019 <!--<button class="btn btn-link btn-sm" type="button">Read More</button>-->
+                            <em>Started June 2020</em>
                         </p>
+
                     </div>
+                </li>
+
+                <li class="list-group-item">
+                    <div class="callout">
+
+                        <h5 class="callout-title">Education</h5>
+
+                        <div class="callout-thumbnail">
+                            <a href="http://coursecatalog.syr.edu/preview_program.php?catoid=3&poid=1011">
+                                <img src='img/logos/syracuse-stacked-logo.png' alt="Syracuse University" class="callout-img" id="syracuse-logo" />
+                            </a>
+                        </div>
+                    
+                        <p class="callout-description">
+                            <span class="lead">Bachelor of Science in Computer Science</span>
+                            <br />
+                            <em>Class of 2019</em>
+                        </p>
+
+                    </div>
+                </li>
+
+                <li class="list-group-item">
+                    <div class="callout">
+
+                        <h5 class="callout-title">Interests</h5>
+
+                        <div class="callout-description">
+                            <p>
+                                Aside from software development, I have a passion for data science and would love to work on a recommender system that improves customer experience by finding more relevant content. I am also interested in computer vision and natural language processing, and would love to find creative ways to solve business needs with these techniques.
+                            </p>
+                        </div><!-- end .callout-description -->
+
+                    </div>
+                </li>
+
+            </ul>
+
+            <div id="back-to-top-float-container">
+                <div id="back-to-top">
+                    <button class="content-only fas fa-arrow-circle-up" id="back-to-top-btn"></button>
                 </div>
-        
-                <div class="container">
+            </div>
+        </main>
 
-                    <div class="row">
-                        <div class="col-sm">
-                            <div class="card text-center">
-                                <div class="card-header">Connect</div>
-                                <div class="card-body">
-                                    <article id="connect" class="row">
-
-                                        <div class="col-sm">
-
-                                            <h5 class="card-title">Contact</h5>
-                                            <ul class="list-group list-group-flush" style="text-align:left;">
-
-                                                <li class="list-group-item">
-                                                    <i class="fas fa-envelope"></i> <a id="connect-email"></a> <span class="badge badge-pill badge-success">Preferred</span>
-                                                </li>
-
-                                                <li class="list-group-item">
-                                                    <i class="fas fa-phone"></i> <a id="connect-cell"></a>
-                                                </li>
-
-                                            </ul>
-
-                                        </div>
-
-                                        <div class="col-sm">
-
-                                            <h5 class="card-title">Profiles</h5>
-                                            <ul class="list-group list-group-flush">
-
-                                                <li class="list-group-item">
-                                                    <a href="https://www.linkedin.com/in/petercougan"><img class="connect-logo" src="img/logos/linkedin-logo_2212wx540h.png"></a>
-                                                </li>
-
-                                                <li class="list-group-item">
-                                                    <a href="https://github.com/petercougan"><img class="connect-logo" src="img/logos/github-logo_1000wx410h.png"></a>
-                                                </li>
-
-                                                <li class="list-group-item">
-                                                    <a href="https://stackoverflow.com/users/3995619/"><img class="connect-logo" src="img/logos/stackoverflow-logo_1200wx286h.png"></a>
-                                                </li>
-
-                                            </ul>
-
-                                        </div>
-
-                                    </article><!-- / #connect.row -->
-                                </div>
-                            </div>
-                        </div><!-- / .col-sm -->
-                    </div><!-- / .row -->
-
-                    <br />
-
-                    <div class="row">
-
-                        <div class="col-sm">
-                            
-                            <div class="row">
-                                <div class="col-sm">
-                                    <div class="card">
-                                        <h5 class="card-header text-center">Blog</h5>
-                                        <div class="card-body">
-                                            <p>I write down some of my thoughts in a blog. There's no theme to the blog -- it's just a collection of thoughts I have encountered while writing and thinking about code.</p>
-                                        </div>
-                                        <button class="card-footer btn btn-block btn-success bg-success card-tab-btn" data-target="#blog">
-                                            Visit Blog
-                                        </button>
-                                    </div>
-                                </div>
-                
-                                <div class="col-sm">
-                                    <div class="card">
-                                        <h5 class="card-header text-center">Projects</h5>
-                                        <div class="card-body">
-                                            <p>I am often working on a personal project to learn about a new skill or advance a current one.</p>
-                                        </div>
-                                        <button class="card-footer btn btn-block btn-success bg-success card-tab-btn" data-target="#projects">
-                                            Learn More
-                                        </button>
-                                    </div>
-                                </div>
-                
-                                <div class="col-sm">
-                                    <div class="card">
-                                        <h5 class="card-header text-center">Experience</h5>
-                                        <div class="card-body">
-                                            <p>Learn more about my background, including education, work history, and skills.</p>
-                                        </div>
-                                        <button class="card-footer btn btn-block btn-success bg-success card-tab-btn" data-target="#experience">
-                                            View Experience
-                                        </button>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div><!-- / .col-sm -->
-
-                    </div><!-- / .row -->
-                </div><!-- / .container -->
-            </section><!-- / #home -->
-
-
-            <section class="tab-pane fade" id="blog" role="tabpanel" aria-labelledby="blog-tab">
-                <div class="container">
-                    <h1>Blog</h1>
-                    <p class="lead">High level thoughts about technical topics from my perspective as a developer</p>
-                    <p>Writing things down has always helped to clarify my understanding of certains topics; this is just an attempt to put my thoughts into a more formal format.</p>
-
-                    <h4>Potential Topics to be Discussed:</h4>
-                    <ul>
-                        <li>Object-Oriented Design</li>
-                        <li>Front-End/Back-End vs Client-Side/Server-Side</li>
-                        <li>NoSQL</li>
-                        <li>Choosing a 1st programming language</li>
-                        <li>How I would teach an Intro to Programming Course</li>
-                        <li>HTTP vs REST</li>
-                        <li>Modular Design</li>
-                        <li>AI vs ML</li>
-                        <li>Intro to machine learning</li>
-                        <li>Demonstration of compiled vs interpreted languages in a project </li>
-                        <li>MVC Explained</li>
-                        <li>Mobile vs Web Development from a Web Dev perspective</li>
-                    </ul>
-
-                    <!--
-                    <div class="card">
-                        <div class="card-header">
-                            <h4><a href="blog/http-vs-rest.html" target="_blank">RESTful Service vs HTTP</a></h4>
-                        </div>
-                        <div class="card-body">
-                            <p>These two terms are often used interchably and incorrectly in web development.</p>
-                        </div>
-                    </div><!-- / .card -->
-                </div><!-- / .container -->
-            </section><!-- / #blog -->
-
-
-            <section class="tab-pane fade" id="projects" role="tabpanel" aria-labelledby="projects-tab">
-                <div class="container">
-                    <h1>Projects</h1>
-                    <div class="card">
-                        <div class="card-body">
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">
-                                    <h5 class="d-inline pull-left">CollabQueue</h5> <span class="pull-right">February 2020</span>
-                                    <ul>
-                                        <li>A mobile app that allows multiple users to modify a single queue from their own devices</li>
-                                        <li>Built with Swift and the Spotify iOS SDK</li>
-                                    </ul>
-                                </li>
-                                <li class="list-group-item">
-                                    <h5>Python for Data Science and Machine Learning Bootcamp</h5>
-                                    <p>
-                                        Late in my student career at Syracuse University, I found a passion in machine learning. I was fortunate to take a handful of ML / AI based classes in my junior and senior year, but wanted to keep learning. 
-                                    </p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div><!-- / .container -->
-            </section><!-- / #projects -->
-
-
-            <section class="tab-pane fade" id="experience" role="tabpanel" aria-labelledby="experience-tab">
-                <div class="container">
-                    <h1>Experience & Skills</h1>
-                    <p class="lead">
-                        Recent grad and young developer with professional experience in full-stack web development
-                        <br />
-                        Very interested in machine learning and data science - currently learning the two in Udemy's <a href="https://www.udemy.com/course/python-for-data-science-and-machine-learning-bootcamp/" target="_blank">Python for Data Science and Machine Learning Bootcamp</a> course
-                        <br />
-                        Working on a mobile app (iOS) built in Swift with Spotify's SDK
-                    </p>
-
-                    <div id="experience-accordion" class="accordion">
-
-                        <div class="card">
-                            <div class="card-header">
-                                <h4>
-                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#education-body">
-                                        Education
-                                    </button>
-                                </h4>
-                            </div>
-
-                            <div id="education-body" class="collapse show" data-parent="#experience-accordion">
-                                <div class="card-body">
-
-                                    <strong>B.S. Computer Science</strong> Syracuse University College of Engineering & Computer Science, <em>August 2015 - May 2019</em>
-
-                                    <ul class="list-group list-group-flush">
-
-                                        <li class="list-group-item">
-                                            Standard coursework consisted of algorithm design and software development, among other topics. You can view the program catalog <a href="http://coursecatalog.syr.edu/preview_program.php?catoid=3&poid=1011" target="_blank">here</a>.
-                                        </li>
-
-                                        <li class="list-group-item">
-                                            Focused my upper-division electives on machine learning-esque topics: Randomized Algorithms, Machine Intelligence with Deep Learning, Intro to Artifical Intelligence, Evolutionary Machine Learning, Social Media Data Mining
-                                        </li>
-
-                                        <li class="list-group-item">
-                                            Extensive work with Java, Python, and Haskell
-                                        </li>
-
-                                    </ul>
-
-                                </div>
-                            </div><!-- / #education-body -->
-                        </div><!-- / .card -->
-
-                        <div class="card">
-                            <div class="card-header">
-                                <h4>
-                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#current-position-body">
-                                        Current Position
-                                    </button>
-                                </h4>
-                            </div>
-
-                            <div id="current-position-body" class="collapse" data-parent="#experience-accordion">
-                                <div class="card-body">
-
-                                    <strong>Software Developer</strong> <a href="https://mohawkglobal.com">Mohawk Global</a>, <em>May 2019 - Current</em>
-
-                                    <ul class="list-group list-group-flush">
-                                        <li class="list-group-item">
-                                            Full-stack web developer working in the domain of international supply chain and logistics
-                                        </li>
-
-                                        <li class="list-group-item">
-                                            The international supply chain model is very complex and full of specific business rules. This requires me to work closely with the stakeholders to truly understand what they are looking to accomplish. I build web applications for our company and clients.
-                                        </li>
-
-                                        <li class="list-group-item">
-                                            Primarily work with C#, ASP.NET MVC, and SQL Server on the back-end, and on the front-end we use Bootstrap 3 with HTML, CSS, and jQuery / JS
-                                        </li>
-                                    </ul>
-
-                                </div>
-                            </div><!-- / #current-position-body -->
-                        </div><!-- / .card -->
-
-                        <div class="card">
-                            <div class="card-header">
-                                <h4>
-                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#former-positions-body">
-                                        Former Positions
-                                    </button>
-                                </h4>
-                            </div>
-
-                            <div id="former-positions-body" class="collapse" data-parent="#experience-accordion">
-                                <div class="card-body">
-
-                                    <strong>Application Development Intern</strong> <a href="https://mohawkglobal.com">Mohawk Global</a>, <em>May 2018 - May 2019</em>
-
-                                    <ul class="list-group list-group-flush">
-                                        <li class="list-group-item">
-                                            Worked full-time May 2018 through August 2018, part-time during the semester as a full-time student September 2018 - May 2019
-                                        </li>
-
-                                        <li class="list-group-item">
-                                            Accepted a full-time position to start after graduation, which is my current position
-                                        </li>
-                                    </ul>
-
-                                </div>
-                            </div><!-- / #former-positions-body -->
-                        </div><!-- / .card -->
-
-                        <div class="card">
-                            <div class="card-header">
-                                <h4>
-                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#skills-body">
-                                        Skills
-                                    </button>
-                                </h4>
-                            </div>
-                            <div id="skills-body" class="collapse" data-parent="#experience-accordion">
-                                <div class="card-body">
-                                    Skills are to be added
-                                    <!--
-                                    <h5>Software Development</h5>
-                                    <ul class="list-group list-group-flush">
-                                        <li class="list-group-item"></li>
-                                    </ul>
-
-                                    <h5>Back-End Development</h5>
-                                    <ul class="list-group list-group-flush">
-                                        <li class="list-group-item"></li>
-                                    </ul>
-
-                                    <h5>Front-End Development</h5>
-                                    <ul class="list-group list-group-flush">
-                                        <li class="list-group-item"></li>
-                                    </ul>
-
-                                    <h5>Other</h5>
-                                    <ul class="list-group list-group-flush">
-                                        <li class="list-group-item"></li>
-                                    </ul>
-
-                                    <h5>Learning</h5>
-                                    <ul class="list-group list-group-flush">
-                                        <li class="list-group-item"></li>
-                                    </ul>
-                                -->
-                                </div>
-                            </div><!-- / #skills-body -->
-                        </div><!-- / .card -->
-
-                    </div><!-- / .accordion -->
-
-                </div><!-- / .container -->
-            </section><!-- / #experience -->
-
-        </main><!-- / #content-wrapper -->
-
-
-
-
-        <!-- Scripts required for Bootstrap 4.4.x -->
+        <!-- Required for Bootstrap 4 and Vanta JS -->
         <script src="js/jquery-3.0.0.slim.min.js"></script>
-        <script src="lib/bootstrap-4/js/bootstrap.min.js"></script> <!-- use lib/bootstrap-4/js/bootstrap.bundle.min.js if Dropdowns and Tooltips are needed -->
 
-        <!-- Scripts required for VantaJS 3D animated waves background-->
+        <!-- Required for VantaJS 3D animated waves background-->
         <script src="js/three.r95.min.js"></script>
         <script src="js/vanta.waves.min.js"></script>
 
         <script>
-            // Initial page setup
-            $(document).ready(function() {
-                var currentTab = '#home';
-
-                initializeVantaJS();
-                setEmail();
-                setCellNumber();
-                changeTabOnCardTabBtnClick();
-                //changeNavbarOnTabChange();
-                //changeNavbarOnScroll();
-
-
-                $('a[data-toggle="tab"]').on('show.bs.tab', function (e) {
-                    var target = $(this).attr('href');
-
-                    if ($(target + '[role="tabpanel"]').length) {
-                        currentTab = target;
-
-                        tabChange_toggleNavbar(currentTab);
-                        $(window).scrollTop(0);
-
-                        if (currentTab == '#home') {
-                            // Ensure vanta background fills entire #hero element
-                            $('.vanta-canvas').width('100%');
-                            $('.vanta-canvas').height('100%');
-                        }
-                    }
-                });
-
-                $(window).scroll(function() {
-                    if (currentTab == '#home') {
-                        if ($(window).scrollTop() > 50) {
-                            $('#navbar').addClass('bg-light');
-                        }
-                        else {
-                            $('#navbar').removeClass('bg-light');
-                        }
-                    }
-                });
-
+            $(document).ready(function(){
+                initializeVantaBackground();
+                openLinksInNewTabOrWindow();
+                setupBackToTopButton();
             });
 
-
-
-            // ========================
-            //  Page setup functions
-            // ========================
-
-            // Set the 3D animated background in the #hero element using the Vanta.JS library
-            //  - Homepage: https://www.vantajs.com/
-            //  - Licensing: https://github.com/tengbao/vanta/blob/master/LICENSE.md
-            function initializeVantaJS() {
+            function initializeVantaBackground() {
+                // Set the 3D animated background in the .waves element using the Vanta.JS library
+                // * Homepage: https://www.vantajs.com/
+                // * Licensing: https://github.com/tengbao/vanta/blob/master/LICENSE.md
                 VANTA.WAVES({
-                    el: '#hero',
+                    el: '.waves',
                     mouseControls: true,
-                    touchControls: true,
+                    touchControls: false,
                     minHeight: 200.00,
                     minWidth: 200.00,
                     scale: 1.00,
-                    scaleMobile: 1.00,
-                    waveHeight: 1.50,         
-                    waveSpeed: 2.00
+                    scaleMobile: 0.10,
+                    waveHeight: 7.50,         
+                    waveSpeed: 1.00
                 });
             }
 
-
-            // Break up email so web scraping bots don't scam me
-            function setEmail() {
-                var email = 'pe' + 'ter_' + 'cou' + 'gan' + '@out' + 'look' + '.com';
-                $('#connect-email').text(email);
-                $('#connect-email').attr('href', 'mailto:' + email);
+            function openLinksInNewTabOrWindow() {
+                // <a href='...' target='_blank'>...</a>
+                $('a').attr('target', '_blank');
             }
 
+            function setupBackToTopButton() {
+                let backToTopDiv = $('#back-to-top');
 
-            // Break up phone number so web scraping bots don't scam me
-            function setCellNumber() {
-                var cellNumber = '+1'+'(315)'+'534'+'-5512';
-                $('#connect-cell').text(cellNumber);
-                $('#connect-cell').attr('href', 'tel:' + cellNumber);
-            }
-
-
-            // Tab should change when buttons in respective home page cards are clicked
-            function changeTabOnCardTabBtnClick() {
-                $('.card-tab-btn').click(function() {
-                    var target = $(this).attr('data-target');
-
-                    if (('a[href="'+target+'"]').length) {
-                        $('a[href="'+target+'"]').click();
-                    }
-                });
-            }
-
-            function tabChange_toggleNavbar(tab) {
-                if (tab != '#home') {
-                    $('#navbar').removeClass('navbar-light');
-                    $('#navbar').addClass('navbar-dark');
-                    $('#navbar').addClass('bg-dark');
-                }
-                else {
-                    $('#navbar').removeClass('navbar-dark');
-                    $('#navbar').removeClass('bg-dark');
-                    $('#navbar').addClass('navbar-light');
-                }
-            }
-
-
-            /*
-            // Navbar initial state is no background with dark text
-            // Should have dark background and light text when viewing any tab other than home
-            function changeNavbarOnTabChange() {
-
-                $('a[data-toggle="tab"]').on('show.bs.tab', function (e) {
-                    var target = $(this).attr('href');
-
-                    if ($(target + '[role="tabpanel"]').length) {
-                        currentTab = target;
-                        console.log(currentTab)
-                        if (target != '#home') {
-                            $('#navbar').removeClass('navbar-light');
-                            $('#navbar').addClass('navbar-dark');
-                            $('#navbar').addClass('bg-dark');
-                        }
-                        else {
-                            $('#navbar').removeClass('navbar-dark');
-                            $('#navbar').removeClass('bg-dark');
-                            $('#navbar').addClass('navbar-light');
-
-                            // Ensure vanta background fills entire #hero element
-                            $('.vanta-canvas').width('100%');
-                            $('.vanta-canvas').height('100%');
-                        }
-                    }
+                backToTopDiv.click(function() {
+                    window.scrollTo(0,0);
                 });
 
-            }
-
-
-            // The navbar background color 
-            function changeNavbarOnScroll() {
                 $(window).scroll(function() {
-                    if (currentTab == '#home') {
-                        if ($(window).scrollTop() > 50) {
-                            $('#navbar').addClass('bg-light');
-                        }
-                        else {
-                            $('#navbar').removeClass('bg-light');
-                        }
+                    if (window.scrollY > 99) {
+                        backToTopDiv.show();
+                    }
+                    else if (backToTopDiv.is(':visible')) {
+                        backToTopDiv.hide();
                     }
                 });
             }
-            */
         </script>
+        <noscript>
+            You must have Javascript enabled to view this page.
+        </noscript>
     </body>
 </html>

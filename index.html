@@ -19,16 +19,8 @@
                 margin:0;
             }
 
-            a  {
-                color: #fff;
-            }
-
-            a:hover {
-                color: #ffa500;
-            }
-
-            a:active, a:focus {
-                color: #e59400;
+            a, a:hover, a:active, a:focus {
+                color: #0e0075;
             }
 
             /*
@@ -49,6 +41,18 @@
                 width: max-content;
             }
 
+            #navbar a  {
+                color: #fff;
+            }
+
+            #navbar a:hover {
+                color: #0e0075;
+            }
+
+            #navbar a:active, a:focus {
+                color: #0e0075;
+            }
+
             #brand > a, #brand a:hover {
                 text-decoration: none;
             }
@@ -66,9 +70,12 @@
                 Bootstrap customizations
             */
 
-            #summary .list-group-item {
-                padding:1rem 0;
+            .list-group-item {
                 background-color: transparent;
+            }
+
+            #summary > .list-group-item {
+                padding:1rem 0;
                 border: none;
             }
 
@@ -117,16 +124,13 @@
             */
 
             .callout {
-                padding:0rem 1rem 1rem;
+                padding: 0rem 1rem 1rem;
                 margin: 0 auto;
                 width: 65%;
                 background-color: rgba(205,205,205,0.25);
-                border-top: solid 1px #ddd;
+                border-top: solid 4px #ddd;
                 border-bottom: solid 1px #ddd;
-                border-top-width: 4px;
-                border-right: none;
                 border-radius: 3px;
-                border-top-right-radius: 3px;
                 overflow: auto;
             }
 
@@ -245,17 +249,18 @@
                 <li class="list-group-item">
                     <div class="callout">
 
-                        <h5 class="callout-title">Interests</h5>
+                        <h5 class="callout-title">About Me</h5>
 
                         <div class="callout-description">
-                            <p>
-                                Aside from software development, I have a passion for data science and would love to work on a recommender system that improves customer experience by finding more relevant content. I am also interested in computer vision and natural language processing, and would love to find creative ways to solve business needs with these techniques.
-                            </p>
-                        </div><!-- end .callout-description -->
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">I get excited to work with new tech stacks and am interested in just about any new technology that comes out</li>
+                                <li class="list-group-item">I'm learning and working with various AWS technologies in my current position as a backend developer</li>
+                                <li class="list-group-item">I'm fascinated by machine learning and am actively learning more about data science / machine learning in my free time</li>
+                            </ul>
+                        </div>
 
                     </div>
                 </li>
-
             </ul>
 
             <div id="back-to-top-float-container">
@@ -263,6 +268,7 @@
                     <button class="content-only fas fa-arrow-circle-up" id="back-to-top-btn"></button>
                 </div>
             </div>
+
         </main>
 
         <!-- Required for Bootstrap 4 and Vanta JS -->
@@ -274,12 +280,12 @@
 
         <script>
             $(document).ready(function(){
-                initializeVantaBackground();
-                openLinksInNewTabOrWindow();
+                setupVantaBackground();
                 setupBackToTopButton();
+                openLinksInNewTabOrWindow();
             });
 
-            function initializeVantaBackground() {
+            function setupVantaBackground() {
                 // Set the 3D animated background in the .waves element using the Vanta.JS library
                 // * Homepage: https://www.vantajs.com/
                 // * Licensing: https://github.com/tengbao/vanta/blob/master/LICENSE.md
